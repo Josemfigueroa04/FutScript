@@ -1,4 +1,5 @@
-const { getPlayers, addPlayer } = require('../db/consultas')
+const { getPlayers, addPlayer } = require('../db/consultas');
+const {login} = require('./login')
 
 const obtenerJugadores = async (req, res) => {
     const { teamID } = req.params
@@ -7,6 +8,10 @@ const obtenerJugadores = async (req, res) => {
 }
 
 const registrarJugador = async (req, res) => {
+    // const {username} = req.user
+    //     if(username !== "admin"){
+    //         return res.status(401).json({message: "No autorizado"})
+    //     }
     const { teamID } = req.params
     const jugador = req.body
     await addPlayer({ jugador, teamID })

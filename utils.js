@@ -1,3 +1,3 @@
-const secretKey = "ULTRA SECRET KEY :O"
+const secretKey = "22921748"
 
 module.exports = { secretKey }
